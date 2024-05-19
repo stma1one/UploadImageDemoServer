@@ -9,6 +9,8 @@ namespace LoginDemoServer.DTO
         public DateTime? BirthDate { get; set; }
         public string Name { get; set; }
 
+        public string Image { get; set; }
+
         public Models.Users ToModelsUser()
         {
             return new Models.Users() { Email = Email, Password = Password, PhoneNumber = PhoneNumber, BirthDate = BirthDate, Name = Name };
@@ -22,6 +24,7 @@ namespace LoginDemoServer.DTO
             this.Email = modelUser.Email;
             this.Password = modelUser.Password;
             this.BirthDate = modelUser.BirthDate;
+            this.Image = modelUser.Image;
         }
     }
 }

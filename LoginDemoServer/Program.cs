@@ -52,9 +52,12 @@ namespace LoginDemoServer
 
             #region Add Session
             app.UseSession(); //In order to enable session management
-            #endregion 
+            #endregion
 
             app.MapControllers();
+            #region Add Static Files
+            app.UseStaticFiles();
+            #endregion
 
             app.Run();
         }
