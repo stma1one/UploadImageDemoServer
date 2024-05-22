@@ -102,7 +102,7 @@ namespace LoginDemoServer.Controllers
             //Decide on File Name
             //System.IO.Path.GetExtension --> gets the type of the file .jpg, mp3,mp4 etc.
             var id = email.Split('@');
-            string fileName = $"profile_image_{id[0].ToLower()}{new Guid()}{System.IO.Path.GetExtension(file.FileName)}";
+            string fileName = $"profile_image_{id[0].ToLower()}{System.IO.Path.GetExtension(file.FileName)}";
 
             //the path to save the file in
             string path = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\images", fileName);
